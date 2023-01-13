@@ -29,7 +29,7 @@ router.get('/:id', (req, res) => {
                 ]
             },
             {
-                model: Commentm
+                model: Comment,
                 attributes: [
                     'id',
                     'comment_text',

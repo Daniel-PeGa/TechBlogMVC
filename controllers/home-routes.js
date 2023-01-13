@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
             'title',
             'created_at',
             'post_content'
-        ]
+        ],
         include: [
             {
                 model: Comment,
@@ -97,7 +97,7 @@ router.get('/post/:id', (req, res) => {
         const post = dbPostData.get({ plain: true });
 
         res.render('single-post', {
-            postm
+            post,
             loggedIn: req.session.loggedIn
         });
     }).catch(err => {
